@@ -11,7 +11,7 @@
     "start": "node server/index.js",
     "backend": "nodemon server/index.js",
     "frontend": "npm run start --prefix client",
-    "dev": "npm run backend && cd client && npm run start "
+    "dev": "npm run start && cd client && npm run start "
   },
   "author": "Akhilesh Yadav",
   "license": "ISC",
