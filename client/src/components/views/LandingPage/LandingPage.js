@@ -1,16 +1,22 @@
-import React from 'react'
-import { FaCode } from "react-icons/fa";
-
-function LandingPage() {
-    return (
-        <>
-            <div className="app">
-                <FaCode style={{ fontSize: '4rem' }} /><br />
-                <span style={{ fontSize: '2rem' }}>Let's Start Coding!</span>
-            </div>
-            <div style={{ float: 'right' }}>Thanks For Using This Boiler Plate by John Ahn</div>
-        </>
-    )
+import React from 'react';
+import Top from "./Components/top";
+import Mid from "./Components/mid";
+import Features from "./Components/features";
+import Tieups from "./Components/tieups"
+function App(){
+    return <div>
+    <div class="div1 container-fluid">
+     
+      <Top />
+      </div>
+      <br /><br /><br />
+      <div style={{width:"80%", margin:"auto"}}> <Mid />
+      <br /><br /><br />
+      <Features />
+      <br /><br /><br />
+      <Tieups />
+      </div> 
+    </div>
+    
 }
-
-export default LandingPage
+export default App;
