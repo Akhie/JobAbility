@@ -23,6 +23,15 @@ const vacancySchema = mongoose.Schema({
     },
     job :{
         type: String
+    },
+    website :{
+        type: String
+    },
+    pcode :{
+        type: String
+    },
+    filepath :{
+        type: String
     }
 }, { timestamps: true })
 
