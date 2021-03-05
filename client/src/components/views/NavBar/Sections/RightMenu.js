@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import { Menu } from 'antd';
+import { Menu, Input } from 'antd';
 import axios from 'axios';
 import { USER_SERVER } from '../../../Config';
 import { withRouter } from 'react-router-dom';
@@ -8,6 +8,12 @@ import { useSelector } from "react-redux";
 
 function RightMenu(props) {
   const user = useSelector(state => state.user)
+
+  const onSearch = (value) => {
+    console.log(value);
+  }
+
+  const {Search} = Input
 
   const logoutHandler = () => {
     axios.get(`${USER_SERVER}/logout`).then(response => {
@@ -22,6 +28,9 @@ function RightMenu(props) {
   if (user.userData && !user.userData.isAuth) {
     return (
       <Menu mode={props.mode}>
+        <Menu.Item key="search" style={{marginBottom:'8px'}}>
+          <Search placeholder="Search Here" allowClear onSearch={onSearch} style={{ width: 200 }} />  
+        </Menu.Item>
         <Menu.Item key="mail">
           <a href="/login">Signin</a>
         </Menu.Item>

@@ -116,8 +116,8 @@ function VacancyPage(props) {
     }  
 
     return (
-        <div className='container-fluid'>
-            <div className='row' style={{ maxWidth: '900px', margin: '2rem auto', border: '1px solid #d3d3d3' }}>
+        <div className='container'>
+            <div className='row' style={{ margin: '2rem auto', border: '1px solid #d3d3d3'}}>
                 <div style={{ maxWidth: '300px', margin: '2rem auto' }}>
                     <Dropzone
                             onDrop={onDrop}
@@ -136,8 +136,8 @@ function VacancyPage(props) {
                         <br/><br/>
                         <h5><em>You can Upload any pdf/image regarding the job information.</em></h5>
                 </div>    
-                <div style={{ maxWidth: '500px', margin: '2rem auto' }}>
-                    <Card outline color='primary'>    
+                <div style={{ maxWidth: '640px', margin: '2rem auto'}}>
+                    <Card className='ml-5' outline color='primary'>    
                         <CardHeader tag='h4' className='bg-primary text-center text-white'>Add Vacancy</CardHeader>
                         <CardBody>
 
@@ -180,7 +180,7 @@ function VacancyPage(props) {
 
                                 <FormGroup row>
                                     <Col sm={3}>
-                                        <label>Physical Code : </label>
+                                        <label>Physical Code: </label>
                                     </Col>
                                     <Col sm={3}>
                                         <Input
