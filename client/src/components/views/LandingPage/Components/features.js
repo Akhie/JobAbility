@@ -16,7 +16,8 @@ function Features(){
   </div>
   <div class="col-lg-6 ">
     <h2 style={{color:"#002D62"}}>Enjoy countless oppurtunities and grab your job.</h2>
-    <p style={{color:"#002D62"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>  
+    <p style={{color:"#002D62"}}>There are thousands of vacancies which are posted every months from various organizations specially for PWD candidates. Keep track on those
+    postings and apply for them hasslefree and grab the job that suits you the most.</p>  
    </div>
   </div>
 </div>
@@ -30,14 +31,15 @@ function Features(){
   <div class="row">
   <div class="col-lg-6 ">
 
-  <h2 >Not only be a physical team but also a digitial</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
+  <h2>Call service specially designed for blind users.</h2>
+  <p>Special service specially designed for blind job aspirants which gives you the convinience of making you account
+  just via a phone call. You can also check the job oppurtunities and check which suits you the most just by dialing our helpline num. Please help them get access to this number.</p>
+  <h4>97XXXXX223</h4>
   </div>
   <div class="col-lg-6 center">
     
   <div class="features">
-    <img class="fea img-fluid" src="https://cdn.pixabay.com/photo/2019/08/22/12/06/team-4423339_1280.png" alt=""></img>
+    <img class="fea img-fluid" src="https://cdn.pixabay.com/photo/2015/10/31/11/58/call-center-1015274_1280.jpg" alt=""></img>
      </div>
   </div>
   </div>

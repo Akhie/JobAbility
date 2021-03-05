@@ -23,10 +23,10 @@ function Mid(){
     </div>
   </div>
   <div class="card" data-aos="zoom-in-up">
-    <img src="https://cdn.pixabay.com/photo/2012/04/26/19/47/penguin-42936_960_720.png" class="card-img-top cimg" alt="..." />
+    <img src="https://cdn.pixabay.com/photo/2016/03/31/22/02/children-1296800__340.png" class="card-img-top cimg" alt="..." />
     <div class="card-body">
-      <h5 class="card-title">Grow faster</h5>
-      <p class="card-text">ada af adf afdsad fasf sadf adf as fdasf asf sadf af asf sdf af ssssssss sad ad</p>
+      <h5 class="card-title">Change Your life</h5>
+      <p class="card-text">Allow us to give you an oppurtunity to change your life forever.</p>
 
     </div>
   </div>
