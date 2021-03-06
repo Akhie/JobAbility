@@ -35,7 +35,7 @@ const tailFormItemLayout = {
   },
 };
 
-function NgoRegisterPage(props) {
+function NgoRegister(props) {
   const dispatch = useDispatch();
   return (
 
@@ -87,7 +87,7 @@ function NgoRegisterPage(props) {
           console.log(dataToSubmit);
           dispatch(ngoRegister(dataToSubmit)).then(response => {
             if (response.payload.success) {
-              props.history.push("/ngologin");
+              props.history.push("/getNgo");
             } else {
               console.log("Not working")
               alert(response.payload.err.errmsg)
@@ -191,7 +191,7 @@ function NgoRegisterPage(props) {
                           id="contact"
                           placeholder="Contact of your organization."
                           type="text"
-                          value={values.website}
+                          value={values.contact}
                           onChange={handleChange}
                           onBlur={handleBlur}
                           className={
@@ -271,4 +271,4 @@ function NgoRegisterPage(props) {
 };
 
 
-export default NgoRegisterPage
+export default NgoRegister

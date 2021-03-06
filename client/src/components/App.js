@@ -25,11 +25,10 @@ function App() {
           <Route exact path="/" component={Auth(LandingPage, null)} />
           <Route exact path="/login" component={Auth(LoginPage, false)} />
           <Route exact path="/register" component={Auth(RegisterPage, false)} />
-          <Route exact path="/vacancy" component={Auth(VacancyPage, true)} />
+          <Route exact path="/vacancy" component={Auth(VacancyPage, null)} />
           <Route exact path="/getNgo" component={Auth(HomePage, null)} />
-          <Route exact path="/vacancy" component={Auth(VacancyPage, false)} />
-          <Route exact path="/jobs" component={Auth(JobsPage, false)} />
-          <Route exact path="/jobs/:jobId" component={Auth(DetailJobPage, false)} />
+          <Route exact path="/jobs" component={Auth(JobsPage, null)} />
+          <Route exact path="/jobs/:jobId" component={Auth(DetailJobPage, null)} />
         </Switch>
       </div>
       <br></br>

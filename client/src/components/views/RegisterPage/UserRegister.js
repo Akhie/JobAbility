@@ -35,7 +35,7 @@ const tailFormItemLayout = {
   },
 };
 
-function RegisterPage(props) {
+function UserRegister(props) {
   const dispatch = useDispatch();
   return (
 
@@ -79,7 +79,7 @@ function RegisterPage(props) {
 
           dispatch(registerUser(dataToSubmit)).then(response => {
             if (response.payload.success) {
-              props.history.push("/login");
+              alert("registered")
             } else {
               alert(response.payload.err.errmsg)
             }
@@ -227,4 +227,4 @@ function RegisterPage(props) {
 };
 
 
-export default RegisterPage
+export default UserRegister
