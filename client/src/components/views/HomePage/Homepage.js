@@ -25,22 +25,27 @@ function HomePage() {
 
         return <Col  xs={24}>
             <div style={{position:'relative'}}>
-                <a href={`/ngo/${ngo._id}`}>
+                
                 <div className='container m-3 p-2' style={{border:'1px  #d3d3d3'}}>
-                        <h3 className='pl-5'>NGO name:<em><b>{ngo.name}</b></em></h3>
+                <a href={`/ngo/${ngo._id}`}>
+                        <h3 className='pl-5'>NGO name:<b>{ngo.name}</b></h3>
+                        </a>
                     <div  className='row'>
                     <div className='col sm-4 pl-5' style={{border:'1px solid #d3d3d3'}}>
                         <p>NGO description:<em>{ngo.discription}</em></p>
                     </div>
                     <div className='col sm-4 pl-5' style={{border:'1px solid #d3d3d3'}}>
-                        <p>NGO website:<em>{ngo.website}</em></p>
+                    <a href={ngo.website}><p>NGO website:<em>{ngo.website}</em></p></a>
+                    </div>
+                    <div className='col sm-4 pl-5' style={{border:'1px solid #d3d3d3'}}>
+                        <p>NGO contactNo:<em>{ngo.contact}</em></p>
                     </div>
                     <div className='col sm-4 pl-5' style={{border:'1px solid #d3d3d3'}}>
                         <p>NGO Address:<em>{ngo.address}</em></p>
                     </div>
                     </div>
                     </div>
-                </a>
+                 
             </div>
         </Col>
     })
@@ -48,7 +53,7 @@ function HomePage() {
     return (
 
         <div style={{ width: '85%', margin: '3rem auto'}}>
-            <Title level={1}>NGOs</Title>
+            <Title level={1}>Non-Government organizations with us.</Title>
             <hr />
             <br />
             

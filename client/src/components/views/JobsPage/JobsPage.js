@@ -29,22 +29,22 @@ function JobsPage() {
 
         return <Col xs={24}>
             <div style={{ position: 'relative', }}>
-                <a href={`/jobs/${job._id}`} >
+                
                     <div className='container m-3 p-2' style={{border:'1px solid #d3d3d3'}}>
-                        <h3 className='pl-5'><em><b>{job.title}</b></em></h3>
+                    <a href={`/jobs/${job._id}`} > <h3 className='pl-5'><b>{job.title}</b></h3></a>
                         <div className='row'>
                             <div className='col-sm-4 pl-5' style={{color:'black'}}>
                                 <p>Job Description : <em> {job.job} </em></p>
                             </div>
                             <div className='col-sm-4 pl-5' style={{color:'black'}}>
-                                <p>Website Link : <em> {job.website} </em></p>
+                            <a href={job.website} >  <p>Website Link : <em> {job.website} </em></p></a>
                             </div>
                             <div className='col-sm-4 pl-5' style={{color:'black'}}>
                                 <p>Contact : <em> {job.contact} </em></p>
                             </div>
                         </div>
                     </div>
-                </a>
+                
             </div>
         </Col>
 
@@ -54,7 +54,7 @@ function JobsPage() {
     if (Jobs.length>0) {
     return (
         <div style={{ width: '85%', margin: '3rem auto' }}>
-            <Title level={2} > JOBS </Title>
+            <Title level={2} >Currently open vacancies.</Title>
             <hr />
 
             <Row gutter={16}>
