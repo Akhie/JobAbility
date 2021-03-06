@@ -87,7 +87,7 @@ function NgoRegister(props) {
           console.log(dataToSubmit);
           dispatch(ngoRegister(dataToSubmit)).then(response => {
             if (response.payload.success) {
-              props.history.push("/getNgo");
+              alert("done");
             } else {
               console.log("Not working")
               alert(response.payload.err.errmsg)

@@ -51,7 +51,7 @@ function JobsPage() {
     })
 
 
-    if (Jobs.length>0) {
+
     return (
         <div style={{ width: '85%', margin: '3rem auto' }}>
             <Title level={2} > JOBS </Title>
@@ -62,12 +62,6 @@ function JobsPage() {
             </Row>
         </div>
     )
-    } else {
-        return (
-            <div>Loading...</div>
-        )
-    }
-
 }
 
 export default JobsPage

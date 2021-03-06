@@ -10,7 +10,7 @@ import Footer from "./views/Footer/Footer";
 import VacancyPage from './views/VacancyPage/VacancyPage';
 import HomePage from './views/HomePage/Homepage';
 import JobsPage from './views/JobsPage/JobsPage';
-import DetailJobPage from './views/JobsPage/DetailJobPage';
+
 
 //null   Anyone Can go inside
 //true   only logged in user can go inside
@@ -25,10 +25,17 @@ function App() {
           <Route exact path="/" component={Auth(LandingPage, null)} />
           <Route exact path="/login" component={Auth(LoginPage, false)} />
           <Route exact path="/register" component={Auth(RegisterPage, false)} />
+<<<<<<< HEAD
           <Route exact path="/vacancy" component={Auth(VacancyPage, null)} />
           <Route exact path="/getNgo" component={Auth(HomePage, null)} />
           <Route exact path="/jobs" component={Auth(JobsPage, null)} />
           <Route exact path="/jobs/:jobId" component={Auth(DetailJobPage, null)} />
+=======
+          <Route exact path="/ngoregister" component={Auth(NgoRegisterPage, false)} />
+          <Route exact path="/ngologin" component={Auth(NgoLoginPage, false)} />
+          <Route exact path="/vacancy" component={Auth(VacancyPage, false)} />
+          <Route exact path="/jobs" component={Auth(JobsPage, false)} />
+>>>>>>> parent of 8e6cec1 (Detailed job page)
         </Switch>
       </div>
       <br></br>

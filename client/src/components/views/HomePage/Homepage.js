@@ -54,8 +54,10 @@ function HomePage() {
             <Title level={1}>NGOs</Title>
             <hr />
             <br />
+            <Row gutter={16}>
+                {renderCards}  
+            </Row>
             
-            {renderCards}
         </div>
     )
 }
