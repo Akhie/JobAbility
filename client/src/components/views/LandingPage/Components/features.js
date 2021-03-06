@@ -1,5 +1,6 @@
 import React from "react";
-//import pic from "../images/fea1.png";
+import '../Components/media.css';
+
 function Features(){
     return <div>
         

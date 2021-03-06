@@ -2,7 +2,8 @@ import React from 'react';
 import Top from "./Components/top";
 import Mid from "./Components/mid";
 import Features from "./Components/features";
-import Tieups from "./Components/tieups"
+import Tieups from "./Components/tieups";
+import './Components/media.css';
 function App(){
     return <div>
     <div class="div1 container-fluid">

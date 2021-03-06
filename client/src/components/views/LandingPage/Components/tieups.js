@@ -1,4 +1,5 @@
 import React from 'react'
+import '../Components/media.css';
 
 function tieups() {
     return (
@@ -27,7 +28,7 @@ function tieups() {
 <div >
 <h1 style={{color:"#002D62", fontWeight:'bold'}}>Making application super easy</h1>
 </div>
-  <p>Now appling to any job is just a matter of few clicks get in touch with the recruiter from the convinience of your home with out any mental or physical stress.</p>
+  <p>Now appling to any job is just a matter of few clicks get in touch with the recruiter from the convinience of your home without any mental or physical stress.</p>
 </div>
 <div class="col-lg-6 center" data-aos="zoom-in-left">
 <img class="pisa img-fluid" src="https://cdn.pixabay.com/photo/2020/08/16/03/30/remote-5491798__340.png" alt=""></img>

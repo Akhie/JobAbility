@@ -29,9 +29,8 @@ function App() {
           <Route exact path="/register" component={Auth(RegisterPage, false)} />
           <Route exact path="/ngoregister" component={Auth(NgoRegisterPage, false)} />
           <Route exact path="/ngologin" component={Auth(NgoLoginPage, false)} />
-          <Route exact path="/vacancy" component={Auth(VacancyPage, true)} />
+          <Route exact path="/vacancy" component={Auth(VacancyPage, null)} />
           <Route exact path="/getNgo" component={Auth(HomePage, null)} />
-          <Route exact path="/vacancy" component={Auth(VacancyPage, false)} />
           <Route exact path="/jobs" component={Auth(JobsPage, false)} />
           <Route exact path="/jobs/:jobId" component={Auth(DetailJobPage, false)} />
         </Switch>
