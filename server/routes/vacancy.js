@@ -45,17 +45,26 @@ router.post("/uploadfiles", (req, res) => {
 //=================================
 
 
-router.get("/getVacancy", (req, res) => {
+router.get("/getJobs", (req, res) => {
 
     Vacancy.find()
         .populate('writer')
-        .exec((err, videos) => {
+        .exec((err, jobs) => {
             if(err) return res.status(400).send(err);
-            res.status(200).json({ success: true, videos })
+            res.status(200).json({ success: true, jobs })
         })
 
 });
 
+router.post("/getJob", (req, res) => {
+
+    Vacancy.findOne({ "_id" : req.body.jobId })
+    .populate('writer')
+    .exec((err, job) => {
+        if(err) return res.status(400).send(err);
+        res.status(200).json({ success: true, job })
+    })
+});
 
 
 router.post("/uploadVacancy", (req, res) => {
