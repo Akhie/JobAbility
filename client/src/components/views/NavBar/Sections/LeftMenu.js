@@ -28,6 +28,12 @@ function LeftMenu(props) {
         <Menu.Item key="setting:4">Sugestions</Menu.Item>
       </MenuItemGroup>
     </SubMenu>
+    <Menu.Item key="clubs">
+      <a href="/">Jobs</a>
+    </Menu.Item>
+    <Menu.Item key="events">
+      <a href="/vacancy">Add Vacancy</a>
+    </Menu.Item>   
   </Menu>
   )
 }
