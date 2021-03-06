@@ -5,8 +5,10 @@ import Auth from "../hoc/auth";
 import LandingPage from "./views/LandingPage/LandingPage.js";
 import LoginPage from "./views/LoginPage/LoginPage.js";
 import RegisterPage from "./views/RegisterPage/RegisterPage.js";
+import NgoRegisterPage from "./views/NgoRegisterPage/NgoRegister.js";
+import NgoLoginPage from "./views/Ngologin/Ngologin";
 import NavBar from "./views/NavBar/NavBar";
-import Footer from "./views/Footer/Footer"
+import Footer from "./views/Footer/Footer";
 import VacancyPage from './views/VacancyPage/VacancyPage';
 
 //null   Anyone Can go inside
@@ -22,7 +24,10 @@ function App() {
           <Route exact path="/" component={Auth(LandingPage, null)} />
           <Route exact path="/login" component={Auth(LoginPage, false)} />
           <Route exact path="/register" component={Auth(RegisterPage, false)} />
+          <Route exact path="/ngoregister" component={Auth(NgoRegisterPage, false)} />
+          <Route exact path="/ngologin" component={Auth(NgoLoginPage, false)} />
           <Route exact path="/vacancy" component={Auth(VacancyPage, true)} />
+
         </Switch>
       </div>
       <Footer />
