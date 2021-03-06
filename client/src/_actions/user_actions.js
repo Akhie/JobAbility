@@ -38,7 +38,7 @@ export function loginUser(dataToSubmit){
     }
 }
 export function ngoUser(dataToSubmit){
-    const request = axios.post(`${NGO_SERVER}/login`,dataToSubmit)
+    const request = axios.post(`${NGO_SERVER}/ngologin`,dataToSubmit)
                 .then(response => response.data);
 
     return {

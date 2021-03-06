@@ -21,6 +21,12 @@ const ngoSchema = mongoose.Schema({
         type: String,
         minglength: 5
     },
+    website:{
+        type: String
+    },
+    contact:{
+        type: String
+    },
     discription: {
         type:String,
         maxlength: 50

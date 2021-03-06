@@ -46,7 +46,9 @@ function NgoRegisterPage(props) {
         discription: '',
         address:'',
         password: '',
-        confirmPassword: ''
+        confirmPassword: '',
+        website: '',
+        contact: ''
       }}
       validationSchema={Yup.object().shape({
         name: Yup.string()
@@ -58,6 +60,10 @@ function NgoRegisterPage(props) {
         email: Yup.string()
           .email('Email is invalid')
           .required('Email is required'),
+        website: Yup.string()
+          .required('Website is required'),
+         contact: Yup.string()
+          .required('contact is required'),
         password: Yup.string()
           .min(6, 'Password must be at least 6 characters')
           .required('Password is required'),
@@ -74,6 +80,8 @@ function NgoRegisterPage(props) {
             name: values.name,
             address: values.address,
             discription: values.discription,
+            website:values.website,
+            contact:values.contact,
             image: `http://gravatar.com/avatar/${moment().unix()}?d=identicon`
           };
           console.log(dataToSubmit);
@@ -104,13 +112,11 @@ function NgoRegisterPage(props) {
         } = props;
         return (
           <div className="app">
-          <h1 style={{fontFamily:"'Oswald', sans-serif", fontcolor:"#1b262c"}}>Make Your <span className="spa">NGO </span> part of <span className="spa">JOBABILITY.</span></h1>
-          <br />
             <div className="container">
-              <div className='offset-md-3 col-md-6 mt-3'>
-                <Card >   
-                  <CardHeader tag='h4' className='bg-primary text-center text-white'>Sign Up</CardHeader> 
-                  <CardBody>
+            <div style={{ maxWidth: '840px', margin: '2rem auto'}}>
+                    <Card className='ml-5' outline color='primary'>    
+                        <CardHeader tag='h4' className='bg-primary text-center text-white'>Register Your NGO</CardHeader>
+                        <CardBody>
                     <Form style={{ minWidth: '375px' }} {...formItemLayout} onSubmit={handleSubmit} >
                       <Form.Item required label="Name">
                         <Input
@@ -160,6 +166,40 @@ function NgoRegisterPage(props) {
                         />
                         {errors.address && touched.address && (
                           <div className="input-feedback">{errors.address}</div>
+                        )}
+                      </Form.Item>
+
+                      <Form.Item required label="website">
+                        <Input
+                          id="website"
+                          placeholder="Website of your organization."
+                          type="text"
+                          value={values.website}
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          className={
+                            errors.website && touched.website ? 'text-input error' : 'text-input'
+                          }
+                        />
+                        {errors.website && touched.website && (
+                          <div className="input-feedback">{errors.website}</div>
+                        )}
+                      </Form.Item>
+                        
+                      <Form.Item required label="contact">
+                        <Input
+                          id="contact"
+                          placeholder="Contact of your organization."
+                          type="text"
+                          value={values.website}
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          className={
+                            errors.contact && touched.contact ? 'text-input error' : 'text-input'
+                          }
+                        />
+                        {errors.contact && touched.contact && (
+                          <div className="input-feedback">{errors.contact}</div>
                         )}
                       </Form.Item>
 

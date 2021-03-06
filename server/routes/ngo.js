@@ -25,7 +25,6 @@ router.get("/auth2", auth2, (req, res) => {
 router.post("/ngoregister", (req, res) => {
 
     const ngo = new Ngo(req.body);
-
     ngo.save((err, doc) => {
         if (err) return res.json({ success: false, err });
         return res.status(200).json({
@@ -59,6 +58,16 @@ router.post("/ngologin", (req, res) => {
         });
     });
 });
+
+router.get("/getNgos", (req, res) => {
+
+    Ngo.find()
+        .exec((err,ngos)=>{
+            if(err)
+            return res.status(400).json({success: false})
+            return res.status(200).json({success: true, ngos})
+        })
+ });
 
 router.get("/logout", auth2, (req, res) => {
     Ngo.findOneAndUpdate({ _id: req.ngo._id }, { token: "", tokenExp: "" }, (err, doc) => {

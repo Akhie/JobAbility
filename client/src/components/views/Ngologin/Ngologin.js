@@ -47,7 +47,7 @@ function NgoLoginPage(props) {
           dispatch(ngoUser(dataToSubmit))
             .then(response => {
               if (response.payload.loginSuccess) {
-                window.localStorage.setItem('userId', response.payload.userId);
+                window.localStorage.setItem('ngoId', response.payload.ngoId);
                 if (rememberMe === true) {
                   window.localStorage.setItem('rememberMe', values.id);
                 } else {
