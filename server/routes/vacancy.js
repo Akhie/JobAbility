@@ -56,6 +56,15 @@ router.get("/getJobs", (req, res) => {
 
 });
 
+router.post("/getJob", (req, res) => {
+
+    Vacancy.findOne({ "_id" : req.body.jobId })
+    .populate('writer')
+    .exec((err, job) => {
+        if(err) return res.status(400).send(err);
+        res.status(200).json({ success: true, job })
+    })
+});
 
 
 router.post("/uploadVacancy", (req, res) => {
