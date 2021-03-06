@@ -34,6 +34,9 @@ function RightMenu(props) {
         <Menu.Item key="app">
           <a href="/register">SignUp</a>
         </Menu.Item>
+        <Menu.Item key="ngoregister">
+          <a href="/ngoregister">Register NGO</a>
+        </Menu.Item>
       </Menu>
     )
   } else {

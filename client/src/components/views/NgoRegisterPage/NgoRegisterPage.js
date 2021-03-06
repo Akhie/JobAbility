@@ -35,7 +35,7 @@ const tailFormItemLayout = {
   },
 };
 
-function NgoRegister(props) {
+function NgoRegisterPage(props) {
   const dispatch = useDispatch();
   return (
 
@@ -87,7 +87,7 @@ function NgoRegister(props) {
           console.log(dataToSubmit);
           dispatch(ngoRegister(dataToSubmit)).then(response => {
             if (response.payload.success) {
-              alert("done");
+              props.history.push("/getNgo");
             } else {
               console.log("Not working")
               alert(response.payload.err.errmsg)
@@ -111,12 +111,11 @@ function NgoRegister(props) {
           handleReset,
         } = props;
         return (
-          
           <div className="container">
             <div className='offset-md-3 col-md-6 mt-3'>
-                <Card className='ml-5' outline color='primary'>    
-                    <CardHeader tag='h4' className='bg-primary text-center text-white'>Register Your NGO</CardHeader>
-                    <CardBody>
+                    <Card className='ml-5' outline color='primary'>    
+                        <CardHeader tag='h4' className='bg-primary text-center text-white'>Register Your NGO</CardHeader>
+                        <CardBody>
                     <Form style={{ minWidth: '375px' }} {...formItemLayout} onSubmit={handleSubmit} >
                       <Form.Item required label="Name">
                         <Input
@@ -271,4 +270,4 @@ function NgoRegister(props) {
 };
 
 
-export default NgoRegister
+export default NgoRegisterPage
