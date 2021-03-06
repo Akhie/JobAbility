@@ -20,30 +20,33 @@ function HomePage() {
             }
         })
     },[]);
+
     // cards to display on homepage
     const renderCards = Products.map((ngo, index) => {
 
-        return <Col  xs={24}>
-            <div style={{position:'relative'}}>
-                <a href={`/ngo/${ngo._id}`}>
-                <div className='container m-3 p-2' style={{border:'1px  #d3d3d3'}}>
-                        <h3 className='pl-5'>NGO name:<em><b>{ngo.name}</b></em></h3>
-                    <div  className='row'>
-                    <div className='col sm-4 pl-5' style={{border:'1px solid #d3d3d3'}}>
-                        <p>NGO description:<em>{ngo.discription}</em></p>
-                    </div>
-                    <div className='col sm-4 pl-5' style={{border:'1px solid #d3d3d3'}}>
-                        <p>NGO website:<em>{ngo.website}</em></p>
-                    </div>
-                    <div className='col sm-4 pl-5' style={{border:'1px solid #d3d3d3'}}>
-                        <p>NGO Address:<em>{ngo.address}</em></p>
-                    </div>
-                    </div>
-                    </div>
-                </a>
-            </div>
-        </Col>
+        return <Col xs={24}>
+                <div style={{ position: 'relative', }}>
+                    <a href={`/ngo/${ngo._id}`} >
+                        <div className='container m-3 p-2' style={{border:'1px solid #d3d3d3'}}>
+                            <h3 className='pl-5'><em><b>{ngo.name}</b></em></h3>
+                            <div className='row'>
+                                <div className='col-sm-4 pl-5' style={{color:'black'}}>
+                                    <p>Description : <em>{ngo.discription}</em></p>
+                                </div>
+                                <div className='col-sm-4 pl-5' style={{color:'black'}}>
+                                    <p>website Link : <em>{ngo.website}</em></p>
+                                </div>
+                                <div className='col-sm-4 pl-5' style={{color:'black'}}>
+                                <p>Contact : <em>{ngo.contact}</em></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </Col>
+
     })
+
     
     return (
 
@@ -52,7 +55,6 @@ function HomePage() {
             <hr />
             <br />
             
-
             {renderCards}
         </div>
     )

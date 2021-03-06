@@ -28,14 +28,11 @@ function RightMenu(props) {
   if (user.userData && !user.userData.isAuth) {
     return (
       <Menu mode={props.mode}>
-        <Menu.Item key="search" style={{marginBottom:'8px'}}>
-          <Search placeholder="Search Here" allowClear onSearch={onSearch} style={{ width: 200 }} />  
-        </Menu.Item>
         <Menu.Item key="mail">
-          <a href="/login">Signin</a>
+          <a href="/login">SignIn</a>
         </Menu.Item>
         <Menu.Item key="app">
-          <a href="/register">Signup</a>
+          <a href="/register">SignUp</a>
         </Menu.Item>
       </Menu>
     )

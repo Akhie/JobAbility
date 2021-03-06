@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { List, Avatar, Row, Col } from 'antd';
 import axios from 'axios';
-import { Document, Page } from 'react-pdf';
+import file from './jobs.png'
 
 function DetailJobPage(props) {
 
@@ -48,10 +48,7 @@ function DetailJobPage(props) {
                             </div>
                             <div className='row m-3'>
                             <p>PDF Document : <em> {Job.filepath} </em></p>
-                                <Document
-                                    file="PDF.pdf"
-                                >
-                                </Document>
+                                <img src={file} />
                             </div>
                             <div className='row m-3'>
                                 <div className='col-sm-4 pl-5' style={{color:'black'}}>

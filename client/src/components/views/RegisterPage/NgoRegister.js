@@ -111,12 +111,12 @@ function NgoRegisterPage(props) {
           handleReset,
         } = props;
         return (
-          <div className="app">
-            <div className="container">
-            <div style={{ maxWidth: '840px', margin: '2rem auto'}}>
-                    <Card className='ml-5' outline color='primary'>    
-                        <CardHeader tag='h4' className='bg-primary text-center text-white'>Register Your NGO</CardHeader>
-                        <CardBody>
+          
+          <div className="container">
+            <div className='offset-md-3 col-md-6 mt-3'>
+                <Card className='ml-5' outline color='primary'>    
+                    <CardHeader tag='h4' className='bg-primary text-center text-white'>Register Your NGO</CardHeader>
+                    <CardBody>
                     <Form style={{ minWidth: '375px' }} {...formItemLayout} onSubmit={handleSubmit} >
                       <Form.Item required label="Name">
                         <Input
@@ -264,7 +264,6 @@ function NgoRegisterPage(props) {
                 </Card>
               </div>
             </div>    
-          </div>
         );
       }}
     </Formik>
