@@ -13,7 +13,7 @@ function LeftMenu(props) {
       <a href="/ngologin">Sign In as NGO</a>
     </Menu.Item>
     <Menu.Item key="clubs">
-      <a href="/">Jobs</a>
+      <a href="/jobs">Jobs</a>
     </Menu.Item>
     <Menu.Item key="events">
       <a href="/vacancy">Add Vacancy</a>

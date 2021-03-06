@@ -10,6 +10,8 @@ import NgoLoginPage from "./views/Ngologin/Ngologin";
 import NavBar from "./views/NavBar/NavBar";
 import Footer from "./views/Footer/Footer";
 import VacancyPage from './views/VacancyPage/VacancyPage';
+import JobsPage from './views/JobsPage/JobsPage';
+
 
 //null   Anyone Can go inside
 //true   only logged in user can go inside
@@ -26,8 +28,8 @@ function App() {
           <Route exact path="/register" component={Auth(RegisterPage, false)} />
           <Route exact path="/ngoregister" component={Auth(NgoRegisterPage, false)} />
           <Route exact path="/ngologin" component={Auth(NgoLoginPage, false)} />
-          <Route exact path="/vacancy" component={Auth(VacancyPage, true)} />
-
+          <Route exact path="/vacancy" component={Auth(VacancyPage, false)} />
+          <Route exact path="/jobs" component={Auth(JobsPage, false)} />
         </Switch>
       </div>
       <Footer />
